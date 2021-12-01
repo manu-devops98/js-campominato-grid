@@ -60,16 +60,16 @@ main {
     align-items: center;
 }
 .container {
-    width: 35%;
+    width: 500px;
+    height: 500px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .container .box,
-.box-even.clicked,
-.box-odd.clicked {
-    width: calc(100% / var(--box-size));
-    height: calc(100% / var(--box-size));
+.container .box-red.clicked {
+    /* width: calc(100% / var(--box-size));
+    height: calc(100% / var(--box-size)); */
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -79,12 +79,12 @@ main {
     border: 1px solid black;
 }
 
-.box-even.clicked {
+.container .box.clicked {
     background-color: #6495EC;
     color: white;
 }
 
-.box-odd.clicked {
+.box-red.clicked {
     background-color: red;
     color: white;
 }
