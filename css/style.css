@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --box-size: 10;
+    --box-size-hard: 9 ;
+    --box-size-crazy: 7;
+}
+
 body {
     background-color: #7FFFD4;
     width: 100%;
@@ -59,23 +65,28 @@ main {
     flex-wrap: wrap;
 }
 
-.container .box {
-    width: 50px;
-    height: 50px;
+.container .box,
+.box-even.clicked,
+.box-odd.clicked {
+    width: calc(100% / var(--box-size));
+    height: calc(100% / var(--box-size));
     display: flex;
     justify-content: center;
     align-items: center; 
     font-size: 1.5em;
+    padding: 0.4em;
     color: black;
     border: 1px solid black;
 }
 
-.blue {
+.box-even.clicked {
     background-color: #6495EC;
+    color: white;
 }
 
-.red {
+.box-odd.clicked {
     background-color: red;
+    color: white;
 }
 /* FOOTER */
 footer {
