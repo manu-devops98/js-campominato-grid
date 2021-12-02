@@ -14,15 +14,12 @@ function () {
     if (select.value == 'easy') {
         row = 10;
         col = 10;
-        console.log(select.value);
     } else if (select.value == 'hard') {
         row = 9;
         col = 9;
-        console.log(select.value);
     } else if (select.value == 'crazy') {
         row = 7;
         col = 7;
-        console.log(select.value);
     }
     
     const numberBox = row * col;
@@ -33,18 +30,11 @@ function () {
         square.style.width = `calc(100% / ${col})`;
         square.style.height = `calc(100% / ${row})`;
         square.append(i + 1);
-        console.log(square);
         container.append(square); 
         
         square.addEventListener('click', function () {
            square.classList.add('clicked'); 
         });
     }
-
 });
-
-
-
-
-
 
